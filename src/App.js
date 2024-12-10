@@ -1,10 +1,11 @@
 import './App.css';
+import Student from './Student/Student';
 
 
 function App() {
   return (
     <div >
-        <p>React</p>
+        <Student/>
     </div>
   );
 }
