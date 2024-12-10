@@ -12,7 +12,7 @@ function App() {
   return (
     <StudentProvider>
       <Student onModalOpen={setShowModal}/>
-      {showModal && <StudentForm/>}
+      {showModal && <StudentForm onShowModalChange={setShowModal}/>}
       <StudentList/>
     </StudentProvider>
   );
