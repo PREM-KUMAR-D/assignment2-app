@@ -23,7 +23,7 @@ const StudentForm =(props)=>{
                 address: "",
             })
         }
-    }, [studCtx.editStudents]);
+    }, [studCtx.editStudents , studCtx.editingStudent]);
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
