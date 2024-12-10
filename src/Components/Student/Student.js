@@ -1,7 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import "./Student.css";
+import StudentContext from "../../store/student-context";
 
 const Student = (props) => {
+
+    const studCtx = useContext(StudentContext);
+
+    const clickHandler = ()=>{
+        props.onModalOpen(true);
+    }
 
     return <Fragment >
         <div className="title">
@@ -9,9 +16,9 @@ const Student = (props) => {
             <h1>Student Manager</h1>
 
 
-            <p>All Students: 0</p>
+            <p>All Students: {studCtx.students.length}</p>
 
-            <button type="button">Add NEW STUDENT</button>
+            <button type="button" onClick={clickHandler}>Add NEW STUDENT</button>
         </div>
 
         <div className="students">

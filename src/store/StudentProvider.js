@@ -30,7 +30,7 @@ const StudentProvider = (props)=>{
     
     const studentContext={
         students:students,
-        setStudents: setStudents,
+        setStudents: addStudentHandler,
         removeStudentHandler: removeStudentHandler,
         updateStudentHandler: updateStudentHandler,
         editingStudent: editingStudent,
